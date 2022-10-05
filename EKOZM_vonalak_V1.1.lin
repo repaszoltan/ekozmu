@@ -1,0 +1,35 @@
+;;
+;;  AutoCAD ISO vonaltípus-definíciós fájl
+;;  2.0 verzió
+;;
+;;  FAP 2022 vonalak E-Közmû tartalom számára
+;;
+*EKOZM_KIF-FF,Kisfeszültség FF ___KIF____KIF___
+A,15,-3,["KIF",Simplex,S=2,U=0.0,X=-2.0,Y=-1],-3
+*EKOZM_KÖF-FF,Középfeszültség FF ___KÖF____KÖF___
+A,15,-3,["KÖF",Simplex,S=2,U=0.0,X=-2.0,Y=-1],-4
+*EKOZM_NAF-FF,Nagyfeszültség FF ___NAF____NAF___
+A,15,-3,["NAF",Simplex,S=2,U=0.0,X=-2.0,Y=-1],-4
+*EKOZM_KIF-FA,Kisfeszültség FA ---KIF---KIF---
+A,7,-3,["KIF",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-3,7,-3
+*EKOZM_KÖF-FA,Középfeszültség FA ---KÖF---KÖF---
+A,7,-3,["KÖF",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-4,7,-3
+*EKOZM_NAF-FA,Nagyfeszültség FA ---NAF---NAF---
+A,7,-3,["NAF",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-4,7,-3
+*EKOZM_VIZ,Vízvezeték ---V---V---
+A,15,-3,["V",Simplex,S=2,U=0.0,X=-0.5,Y=-1],-3
+*EKOZM_CS,Csapadékvíz ---CS---CS---
+A,15,-3,["CS",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-3
+*EKOZM_SZ,Szennyvíz ---SZ---SZ---
+A,15,-3,["SZ",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-3
+*EKOZM_GAZ,Gázvezeték ---G---G---
+A,15,-3,["G",Simplex,S=2,U=0.0,X=-0.5,Y=-1],-3
+*EKOZM_TH-FA,Távhõ FA ---TH---TH---
+A,7,-3,["TH",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-3,7,-3
+*EKOZM_TH-FF,Távhõ FF ___TH____TH___
+A,15,-3,["TH",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-3
+*EKOZM_HK-FA,Hírközlés FA ---HK---HK---
+A,7,-3,["HK",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-3,7,-3
+*EKOZM_HK-FF,Hírközlés FF ___HK____HK___
+A,15,-3,["HK",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-3
+;;

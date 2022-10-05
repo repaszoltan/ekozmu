@@ -1,0 +1,57 @@
+;;
+;;  AutoCAD ISO vonaltípus-definíciós fájl
+;;  2.0 verzió
+;;
+;;  FAP 2022 vonalak Hírközlési közmûüzemeltetõk szerint
+;;
+;;
+*EKOZM_MT-FA,Magyar Telekom FA ---MT---MT---
+A,7,-3,["MT",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-3,7,-3
+*EKOZM_MT-FF,Magyar Telekom FF ___MT____MT___
+A,15,-3,["MT",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-3
+;;
+*EKOZM_DIGI-FA,Digi FA ---DIGI---DIGI---
+A,7,-3,["DIGI",Simplex,S=2,U=0.0,X=-2.4,Y=-1],-3,7,-3
+*EKOZM_DIGI-FF,Digi FF ___DIGI____DIGI___
+A,15,-3,["DIGI",Simplex,S=2,U=0.0,X=-2.4,Y=-1],-3
+;;
+*EKOZM_VIDA-FA,Vidanet FA ---Vida---Vida---
+A,7,-3,["Vida",Simplex,S=2,U=0.0,X=-2.9,Y=-1],-3,7,-3
+*EKOZM_VIDA-FF,Vidanet FF ___Vida____Vida___
+A,15,-3,["Vida",Simplex,S=2,U=0.0,X=-2.9,Y=-1],-3
+;;
+*EKOZM_VODAFONE-FA,Vodafone FA ---VDF---VDF---
+A,7,-3,["VDF",Simplex,S=2,U=0.0,X=-2.4,Y=-1],-3,7,-3
+*EKOZM_VONAFONE-FF,Vodafone FF ___VDF____VDF___
+A,15,-3,["VDF",Simplex,S=2,U=0.0,X=-2.4,Y=-1],-3
+;;
+*EKOZM_INVITEL-FA,Invitel FA ---INV---INV---
+A,7,-3,["INV",Simplex,S=2,U=0.0,X=-2.4,Y=-1],-3,7,-3
+*EKOZM_INVITEL-FF,Invitel FF ___INV____INV___
+A,15,-3,["INV",Simplex,S=2,U=0.0,X=-2.4,Y=-1],-3
+;;
+*EKOZM_INVITECH-FA,Invitech FA ---INVT---INVT---
+A,7,-3,["INVT",Simplex,S=2,U=0.0,X=-2.7,Y=-1],-3,7,-3
+*EKOZM_INVITECH-FF,Invitech FF ___INVT____INVT___
+A,15,-3,["INVT",Simplex,S=2,U=0.0,X=-2.7,Y=-1],-3
+;;
+*EKOZM_AH-FA,Antenna Hungaria FA ---AH---AH---
+A,7,-3,["AH",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-3,7,-3
+*EKOZM_AH-FF,Antenna Hungaria FF ___AH____AH___
+A,15,-3,["AH",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-3
+;;
+*EKOZM_HSAT-FA,Hir-Sat FA ---HS---HS---
+A,7,-3,["HS",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-3,7,-3
+*EKOZM_HSAT-FF,Hir-Sat FF ___HS____HS___
+A,15,-3,["HS",Simplex,S=2,U=0.0,X=-1.5,Y=-1],-3
+;;
+*EKOZM_KSZN-FA,Kábelszatnet FA ---KSZN---KSZN---
+A,7,-4,["KSZN",Simplex,S=2,U=0.0,X=-3.5,Y=-1],-4,7,-3
+*EKOZM_KSZN-FF,Kábelszatnet FF ___KSZN____KSZN___
+A,15,-4,["KSZN",Simplex,S=2,U=0.0,X=-3.5,Y=-1],-4
+;;
+*EKOZM_MW-FA,MicroWave FA ---MW---MW---
+A,7,-3,["MW",Simplex,S=2,U=0.0,X=-2.4,Y=-1],-3,7,-3
+*EKOZM_MW-FF,MicroWave FF ___MW____MW___
+A,15,-3,["MW",Simplex,S=2,U=0.0,X=-2.4,Y=-1],-3
+;;
