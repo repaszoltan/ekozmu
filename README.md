@@ -1,4 +1,4 @@
-# E-kozmu shape-->DXF konverzió
+# E-közmű shape --> DXF konverzió
 Az E-közmű adatszolgáltatás SHP állományait formázott DXF állományba konvertálja Python és QGIS segítségével.
 
 <h2>Disclaimer:</h2>
@@ -10,3 +10,7 @@ Szükséges lenne egyolyan lehetőleg nyílt forrású programami átalakítja C
 <h3>Környezet előkészítése</h3>
 Szükséges,hogy legyen a python3 telepítve a rendszeren. (https://www.python.org/downloads/)
 QGIS-re isszükség lesz, valamelyik friss LTR verzió javasolt. (https://www.qgis.org/en/site/forusers/download.html)
+<h3>1. lépés</h3>
+A 1_Rename.py és 2_pyQgis_ekozmu_1.2.py scripteket le kell menteni egy tetszőleges helyre<br>
+Létre kell hozni egy "data" nevű köyvtárat.<br>
+A kapott adatszolgáltatástartalmát ki kell csomagolni a "data" könyvtárba.
