@@ -120,7 +120,7 @@ try:
     layers_th = QgsProject.instance().mapLayersByName('Tavho')
     layer = layers_th[0]
     #V_SZALLMOD ellenorzese
-    layer.selectByExpression('"V_SZALLMOD"=1 AND "V_SZALLMOD"=2')
+    layer.selectByExpression('"V_SZALLMOD"=1 OR "V_SZALLMOD"=2')
     szamlalo = layer.selectedFeatureCount()
     print (szamlalo)
     #Ha nem szerepel V_SZALLMOD bejegyzes, akkor a tavhot egy retegre kell kiirni, ha szerepel, akkor FF és FA retegekre
