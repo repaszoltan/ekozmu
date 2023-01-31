@@ -1,10 +1,8 @@
-#######################################################################################################################################
+#RÉPÁS Zoltán
+#2023.
 #
 # E-KÖZMŰ adatszolgáltatás állományainak átnevezése QGIS konvertálás előtt
 #
-# Répás Zoltán
-# 
-#######################################################################################################################################
 
 import glob
 import os
@@ -59,3 +57,5 @@ rename('*_161_*hi1_', 'Invitech')
 rename('*_345_*hi1_', 'HirSat2000')
 rename('*_44_*hi1_', 'AntennaHungaria')
 rename('*_212_*hi1_', 'KabelSzatnet')
+rename('*_228_*hi1_', 'MicroWave')
+rename('*_54_*hi1_', 'MagyarHalozatepito')
