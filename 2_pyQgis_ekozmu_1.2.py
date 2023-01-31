@@ -1,3 +1,6 @@
+#RÉPÁSZoltán
+#2023.
+#
 #E-kozmu adatszolgaltatast feldolgozo script
 #
 # Eleresi ut beallitasa, hogy hova exportaljon a script. (eleg kezdetleges, de lesz ez jobb is)
@@ -61,7 +64,7 @@ try:
     removeLayers('Villamos_energia')
     #
 except:
-    print("Nincs ilyen layer")
+    print("Nincs ilyen layer: Elektromos vezeték")
 
 #Vizvezetek, csak nevet valtztatunk#############################################################################################
 try:
@@ -76,7 +79,7 @@ try:
     del (writer)
     removeLayers('Vizvezetek')
 except:
-    print("Nincs ilyen layer")
+    print("Nincs ilyen layer: Vízvezeték")
 
 #Vizvezetek, szennyviz es csapadekviz retegre kell osztani######################################################################
 try:
@@ -97,7 +100,7 @@ try:
     del (writer)
     removeLayers('Vizelvezetes')
 except:
-    print ("Nincs ilyen layer")
+    print ("Nincs ilyen layer: Vízelvezetés")
 
 #Gazvezetek, csak nevet valtztatunk############################################################################################
 try:
@@ -112,7 +115,7 @@ try:
     del (writer)
     removeLayers('Gazvezetek')
 except:
-    print("Nincs ilyen layer")
+    print("Nincs ilyen layer: Gázvezeték")
 
 #Tavho, fold feletti es fold alatti retegekre osztjuk##########################################################################
 ###Itt problema van a "V_ELHMOD" attributum mezovel, van, hogyhianyzik###
@@ -120,7 +123,7 @@ try:
     layers_th = QgsProject.instance().mapLayersByName('Tavho')
     layer = layers_th[0]
     #V_SZALLMOD ellenorzese
-    layer.selectByExpression('"V_SZALLMOD"=1 OR "V_SZALLMOD"=2')
+    layer.selectByExpression('"V_ELHMOD"=1 OR "V_ELHMOD"=2')
     szamlalo = layer.selectedFeatureCount()
     print (szamlalo)
     #Ha nem szerepel V_SZALLMOD bejegyzes, akkor a tavhot egy retegre kell kiirni, ha szerepel, akkor FF és FA retegekre
@@ -130,10 +133,10 @@ try:
         writer = QgsVectorFileWriter.writeAsVectorFormat(layer, fn_th, 'utf-8', driverName='ESRI Shapefile', onlySelected=True)
         selected_layer = iface.addVectorLayer(fn_th, '', 'ogr')
         del (writer)
-        print("Hianyzo V_SZALLMOD attributumok!")
+        print("Hianyzo V_ELHMOD attributumok!")
     else:
         #Fold feletti lekerdezese
-        layer.selectByExpression('"V_SZALLMOD"=1')
+        layer.selectByExpression('"V_ELHMOD"=1')
 
         #Uj reteg letrehozasa
         fn_th = path + "/EKOZM_TAVHO_VEZ_FF.shp"
@@ -151,7 +154,7 @@ try:
         del (writer)
     removeLayers('Tavho')
 except:
-    print("Nincs ilyen layer")
+    print("Nincs ilyen layer: Távhő")
 
 #Tavkozles, cegenkent #########################################################################################################
 # Magyar Telekom #######################################################
@@ -173,7 +176,7 @@ try:
     del (writer)
     removeLayers('MagyarTelekom')
 except:
-    print ("Nincs ilyen layer")
+    print ("Nincs ilyen layer: Telekom")
 # Digi ###############################################################
 try:
     layers_ve = QgsProject.instance().mapLayersByName('DIGI')
@@ -193,7 +196,7 @@ try:
     del (writer)
     removeLayers('DIGI')
 except:
-    print ("Nincs ilyen layer")
+    print ("Nincs ilyen layer: DIGI")
 # Vidanet ###############################################################
 try:
     layers_ve = QgsProject.instance().mapLayersByName('Vidanet')
@@ -213,7 +216,7 @@ try:
     del (writer)
     removeLayers('Vidanet')
 except:
-    print ("Nincs ilyen layer")
+    print ("Nincs ilyen layer: Vidanet")
 # Vodafone ###############################################################
 try:
     layers_ve = QgsProject.instance().mapLayersByName('Vodafone')
@@ -233,7 +236,7 @@ try:
     del (writer)
     removeLayers('Vodafone')
 except:
-    print ("Nincs ilyen layer")
+    print ("Nincs ilyen layer: Vodafone")
 # Invitel ###############################################################
 try:
     layers_ve = QgsProject.instance().mapLayersByName('Invitel')
@@ -253,7 +256,7 @@ try:
     del (writer)
     removeLayers('Invitel')
 except:
-    print ("Nincs ilyen layer")
+    print ("Nincs ilyen layer: Invitel")
 # Invitech ###############################################################
 try:
     layers_ve = QgsProject.instance().mapLayersByName('Invitech')
@@ -273,10 +276,10 @@ try:
     del (writer)
     removeLayers('Invitech')
 except:
-    print ("Nincs ilyen layer")
+    print ("Nincs ilyen layer: Invitech")
 # HirSat ###############################################################
 try:
-    layers_ve = QgsProject.instance().mapLayersByName('HirSat')
+    layers_ve = QgsProject.instance().mapLayersByName('HirSat2000')
     layer = layers_ve[0]
     layer.selectByExpression('"V_ELHMOD"=1 ')
 
@@ -293,7 +296,7 @@ try:
     del (writer)
     removeLayers('HirSat')
 except:
-    print ("Nincs ilyen layer")
+    print ("Nincs ilyen layer: Hir-Sat")
 # AntennaHungaria ###############################################################
 try:
     layers_ve = QgsProject.instance().mapLayersByName('AntennaHungaria')
@@ -311,12 +314,12 @@ try:
     writer = QgsVectorFileWriter.writeAsVectorFormat(layer, fn_cs, 'utf-8', driverName='ESRI Shapefile', onlySelected=True)
     selected_layer = iface.addVectorLayer(fn_cs, '', 'ogr')
     del (writer)
-    removeLayers('Antenna')
+    removeLayers('AntennaHungaria')
 except:
-    print ("Nincs ilyen layer")
-# KabelszatNet ###############################################################
+    print ("Nincs ilyen layer: AntennaHungaria")
+# KabelSzatnet ###############################################################
 try:
-    layers_ve = QgsProject.instance().mapLayersByName('KabelszatNet')
+    layers_ve = QgsProject.instance().mapLayersByName('KabelSzatnet')
     layer = layers_ve[0]
     layer.selectByExpression('"V_ELHMOD"=1 ')
 
@@ -331,9 +334,9 @@ try:
     writer = QgsVectorFileWriter.writeAsVectorFormat(layer, fn_cs, 'utf-8', driverName='ESRI Shapefile', onlySelected=True)
     selected_layer = iface.addVectorLayer(fn_cs, '', 'ogr')
     del (writer)
-    removeLayers('KabelszatNet')
+    removeLayers('KabelSzatnet')
 except:
-    print ("Nincs ilyen layer")
+    print ("Nincs ilyen layer: KabelSzatnet")
 # MicroWave ###############################################################
 try:
     layers_ve = QgsProject.instance().mapLayersByName('MicroWave')
@@ -353,4 +356,25 @@ try:
     del (writer)
     removeLayers('MicroWave')
 except:
-    print ("Nincs ilyen layer")
+    print ("Nincs ilyen layer: MicroWave")
+
+ # MagyarHalozatepito ###############################################################
+try:
+    layers_ve = QgsProject.instance().mapLayersByName('MagyarHalozatepito')
+    layer = layers_ve[0]
+    layer.selectByExpression('"V_ELHMOD"=1 ')
+
+    fn_sz = path + "/EKOZM_HIRKOZLES_VEZ_FF_MicroWave.shp"
+    writer = QgsVectorFileWriter.writeAsVectorFormat(layer, fn_sz, 'utf-8', driverName='ESRI Shapefile', onlySelected=True)
+    selected_layer = iface.addVectorLayer(fn_sz, '', 'ogr')
+    del (writer)
+
+    layer.selectByExpression('"V_ELHMOD"=2 OR "V_ELHMOD"=3')
+
+    fn_cs = path + "/EKOZM_HIRKOZLES_VEZ_FA_MicroWave.shp"
+    writer = QgsVectorFileWriter.writeAsVectorFormat(layer, fn_cs, 'utf-8', driverName='ESRI Shapefile', onlySelected=True)
+    selected_layer = iface.addVectorLayer(fn_cs, '', 'ogr')
+    del (writer)
+    removeLayers('MagyarHalozatepito')
+except:
+    print ("Nincs ilyen layer: Magyar Halozatepito")
